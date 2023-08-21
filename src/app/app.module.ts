@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    GridsterModule.forRoot()
+    GridsterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
