@@ -30,7 +30,7 @@ export class GridsterService {
 
     gridsterComponent: GridsterComponent;
 
-    debounceRenderSubject = new Subject();
+    debounceRenderSubject = new Subject<void>();
 
     public $positionHighlight: HTMLElement;
 
