@@ -135,7 +135,8 @@ import { utils } from '../utils/utils';
     }
     `],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class GridsterItemComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
     @Input() x: number;
