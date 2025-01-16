@@ -5,7 +5,8 @@ import { GridsterComponent, IGridsterOptions, IGridsterDraggableOptions } from '
     selector: 'demo-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class AppComponent implements OnInit {
     static X_PROPERTY_MAP: any = {

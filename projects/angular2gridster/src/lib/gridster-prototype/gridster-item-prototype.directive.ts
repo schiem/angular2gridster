@@ -10,7 +10,8 @@ import { Draggable } from '../utils/draggable';
 import { utils } from '../utils/utils';
 
 @Directive({
-    selector: '[ngxGridsterItemPrototype]'
+    selector: '[ngxGridsterItemPrototype]',
+    standalone: false
 })
 export class GridsterItemPrototypeDirective implements OnInit, OnDestroy {
     @Output() drop = new EventEmitter();
