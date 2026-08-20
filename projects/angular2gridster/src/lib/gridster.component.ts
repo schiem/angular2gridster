@@ -73,7 +73,7 @@ import { GridsterOptions } from './GridsterOptions';
     providers: [GridsterService],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
-    standalone: false
+    standalone: false,
 })
 export class GridsterComponent implements OnInit, AfterContentInit, OnDestroy {
     @Input() options: IGridsterOptions;
