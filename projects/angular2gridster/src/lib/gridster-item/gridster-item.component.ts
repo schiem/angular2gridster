@@ -453,7 +453,7 @@ export class GridsterItemComponent implements OnInit, OnChanges, AfterViewInit, 
         });
         this.resizeSubscriptions = [];
 
-        [].forEach.call(this.$element.querySelectorAll('.gridster-item-resizable-handler'), (handler) => {
+        [].forEach.call(this.$element.querySelectorAll('.gridster-item-resizable-handler'), (handler: HTMLElement) => {
             handler.style.display = '';
         });
     }
@@ -512,7 +512,7 @@ export class GridsterItemComponent implements OnInit, OnChanges, AfterViewInit, 
     }
 
     private getResizeHandlers(): HTMLElement[]  {
-        return [].filter.call(this.$element.children[0].children, (el) => {
+        return [].filter.call(this.$element.children[0].children, (el: HTMLElement) => {
 
             return el.classList.contains('gridster-item-resizable-handler');
         });
@@ -537,7 +537,7 @@ export class GridsterItemComponent implements OnInit, OnChanges, AfterViewInit, 
         return resizableOptions;
     }
 
-    private hasResizableHandle(direction: string): boolean {
+    private hasResizableHandle(direction: string): boolean | undefined {
         const isItemResizable = this.gridster.options.resizable && this.item.resizable;
         const resizeHandles = this.gridster.options.resizeHandles;
 

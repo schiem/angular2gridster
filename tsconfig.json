@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "importHelpers": true,
     "esModuleInterop": true,
     "module": "es2020",
@@ -10,13 +9,17 @@
     "declaration": false,
     "moduleResolution": "bundler",
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
     "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "paths": {
       "angular2gridster": [
-        "dist/angular2gridster"
+        "./dist/angular2gridster"
       ]
     },
     "useDefineForClassFields": false

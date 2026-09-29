@@ -1,9 +1,9 @@
 import { GridListItem } from './GridListItem';
 import { IGridsterOptions } from '../IGridsterOptions';
 
-const GridCol = function(lanes) {
+const GridCol = function(lanes: number) {
     for (let i = 0; i < lanes; i++) {
-        this.push(null);
+        (this as any[]).push(null);
     }
 };
 // Extend the Array prototype
@@ -36,7 +36,7 @@ GridCol.prototype = [];
  */
 export class GridList {
     items: Array<GridListItem>;
-    grid: Array<Array<GridListItem>>;
+    grid: Array<Array<GridListItem | null>>;
 
     options: IGridsterOptions;
 
@@ -258,7 +258,7 @@ export class GridList {
     }> {
         return this.items
             .map((item: GridListItem) => {
-                const changes = [];
+                const changes: string[] = [];
                 const oldValues: {
                     x?: number;
                     y?: number;
@@ -410,7 +410,7 @@ export class GridList {
         y: number,
         w: number,
         h: number,
-        item: GridListItem = null
+        item: GridListItem | null = null
     ): boolean {
         let itemData = { x, y, w, h };
 
